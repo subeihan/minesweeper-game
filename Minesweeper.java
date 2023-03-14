@@ -399,6 +399,7 @@ public class Minesweeper extends JFrame {
 							int selectedItem = topFiveGameChoice.getSelectedIndex();
 							selectedGame = topFiveGameList.get(selectedItem);
 							remainingTime = selectedGame.getScore();
+							timerLabel.setText("Time Remaining: " + remainingTime);
 							numOfHiddenMines = 0;
 							gameWon = true;
 							gameLost = false;
