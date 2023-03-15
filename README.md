@@ -1,8 +1,8 @@
-<h2 style="text-align: center"> 
+<h1 style="text-align: center"> 
     Minesweeper Game Implementation
-</h2>
+</h1>
 
-### Introduction
+## Introduction
 This is a Minesweeper game implementation with saving, loading and ranking functions performed on a server with a backend database.
 
 ### Features
@@ -18,26 +18,31 @@ This is a Minesweeper game implementation with saving, loading and ranking funct
 
 #### Menu
 <p style="text-align: center" style="padding: 10px"> 
- <img src="documentation/menu.png">
+ <img src="documentation/menu.png"
+	alt="menu">
 </p>
 
 #### Saved Games
 <p style="text-align: center" style="padding: 10px"> 
- <img src="documentation/saved_games.png">
+ <img src="documentation/saved_games.png"
+	alt="saved_games">
 </p>
 
 #### Saved Game Loaded
 <p style="text-align: center" style="padding: 10px"> 
- <img src="documentation/open_loaded.png">
+ <img src="documentation/open_loaded.png"
+	alt="open_loaded">
 </p>
 
 #### Top Five High Score Games
 <p style="text-align: center" style="padding: 10px"> 
- <img src="documentation/topfive_games.png">
+ <img src="documentation/topfive_games.png"
+	alt="topfive_games">
 </p>
 
 #### One Top-Five Game Loaded
 <p style="text-align: center" style="padding: 10px"> 
- <img src="documentation/topfive_loaded.png">
+ <img src="documentation/topfive_loaded.png"
+	alt="topfive_loaded">
 </p>
 
