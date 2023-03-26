@@ -9,12 +9,19 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 public class GameServer implements Runnable {
 	/*server for the game, accept connections from Minesweeper application and
 	 * store a game state or a game with top-five high score */
 	
 	private int clientNum = 0;
+	private static ExecutorService threadPool = new ThreadPoolExecutor(3, 10, 1, TimeUnit.MINUTES, 
+			new ArrayBlockingQueue<>(10), Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 	
 	public GameServer() {
 		Thread t = new Thread(this);
@@ -32,7 +39,7 @@ public class GameServer implements Runnable {
 	        	clientNum++;
 
 	        	// Create and start a new thread for the connection
-	        	new Thread(new HandleAClient(socket, clientNum)).start();
+	        	threadPool.execute(new HandleAClient(socket, clientNum));
 	        }
 	       
 		}
