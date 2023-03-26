@@ -21,7 +21,7 @@ public class GameServer implements Runnable {
 	
 	private int clientNum = 0;
 	private static ExecutorService threadPool = new ThreadPoolExecutor(3, 10, 1, TimeUnit.MINUTES, 
-			new ArrayBlockingQueue<>(10), Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
+			new ArrayBlockingQueue<>(2), Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 	
 	public GameServer() {
 		Thread t = new Thread(this);
